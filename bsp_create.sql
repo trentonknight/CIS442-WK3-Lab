@@ -4,12 +4,13 @@
 DROP TABLE DEPT;
 DROP TABLE EMP;
 /*Create DEPT table*/
+
 CREATE TABLE DEPT
 (
-  Debt_id int NOT NULL,
+  Dept_id int NOT NULL,
   Name varchar(50) NOT NULL,
   Location varchar(50) NOT NULL,
-  CONSTRAINT pk_deptID PRIMARY KEY(Debt_id)
+  CONSTRAINT pk_deptID PRIMARY KEY(Dept_id)
 );
 /*Create EMP Table*/
 CREATE TABLE EMP
