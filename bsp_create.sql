@@ -9,7 +9,7 @@ CREATE TABLE DEPT
 (
   Dept_id int NOT NULL,
   Name varchar(50) NOT NULL,
-  Location varchar(50) NOT NULL,
+  Location varchar(100) NOT NULL,
   CONSTRAINT pk_deptID PRIMARY KEY(Dept_id)
 );
 /*Create EMP Table*/
