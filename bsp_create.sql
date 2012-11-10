@@ -20,7 +20,7 @@ CREATE TABLE EMP
   Job varchar(50) NOT NULL,
   Manager varchar(50) NOT NULL,
   Hire_dt date,
-  Salary numeric(6,2) NOT NULL,
+  Salary numeric(8,2) NOT NULL,
   Commission numeric(6,2) NOT NULL,
   Dept_id int NOT NULL,
   CONSTRAINT pk_empID PRIMARY KEY(EMP_id)
