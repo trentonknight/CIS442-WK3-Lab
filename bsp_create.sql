@@ -1,8 +1,8 @@
 /*CIS442*/
 /*WK3*/
 /*Jason N Mansfield*/
-DROP TABLE DEPT;
 DROP TABLE EMP;
+DROP TABLE DEPT;
 /*Create DEPT table*/
 
 CREATE TABLE DEPT

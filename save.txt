@@ -1,0 +1,4 @@
+INSERT INTO EMP
+(EMP_id,Name,Job,Manager,Hire_dt,Salary,Commission,Dept_id)
+VALUES(10, 'Dr. Entropy', 'Professor of Science', 'Dr. Yellow','02-NOV-10',080000.00,1000.00,10)
+/

@@ -3,7 +3,7 @@ DELETE FROM DEPT;
 DELETE FROM EMP;
 /*fill MIT related values for DEPT*/
 INSERT INTO DEPT
-(Dept_id,Name,Location)
+(Dept_id,Name, Location)
 VALUES(1, 'School of Architecture and Planning','Rogers Building');
 INSERT INTO DEPT
 (Dept_id, Name, Location)
