@@ -1,0 +1,219 @@
+@\\Client\H$\Development\CIS442\CIS442-WK3-Lab\bsp_create.sql
+Not a valid ID                                                                                                                                                                                                                                                          
+
+PL/SQL procedure successfully completed.
+
+Not a valid ID                                                                                                                                                                                                                                                          
+
+PL/SQL procedure successfully completed.
+
+Not a valid ID                                                                                                                                                                                                                                                          
+
+PL/SQL procedure successfully completed.
+
+
+Table dropped.
+
+
+Table dropped.
+
+DROP TABLE DEPT
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+
+Table created.
+
+CREATE TABLE DEPT
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+
+Table created.
+
+SQL> @\\Client\H$\Development\CIS442\CIS442-WK3-Lab\bsp_fill.sql
+CREATE TABLE EMP
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+
+0 rows deleted.
+
+
+0 rows deleted.
+
+
+0 rows deleted.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+INSERT INTO DEPT
+*
+ERROR at line 1:
+ORA-00001: unique constraint (CIS442FX70_08.PK_DEPTID) violated 
+
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> set PAGESIZE 180;
+SQL> 
+SQL> set LINESIZE 264;
+SQL> SELECT * FROM DEPT;
+
+   DEPT_ID NAME                                               LOCATION                                                                                                                                                                                                  
+---------- -------------------------------------------------- ----------------------------------------------------------------------------------------------------                                                                                                      
+         1 School of Architecture and Planning                Rogers Building                                                                                                                                                                                           
+         2 School of Engineering                              Eastman Laboratories                                                                                                                                                                                      
+         3 School of Humanities, Arts and Social Sciences     Maclaurin Buildings                                                                                                                                                                                       
+         4 Sloan School of Management                         MIT Sloan                                                                                                                                                                                                 
+         5 School of Science                                  Herman Building                                                                                                                                                                                           
+
+SQL> SELECT * FROM EMP;
+
+    EMP_ID NAME                                               JOB                                                MANAGER                                            HIRE_DT       SALARY COMMISSION    DEPT_ID                                                          
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --------- ---------- ---------- ----------                                                          
+         1 Dr. Black                                          Assistant Professor of Architecture                Dr. Red                                            01-JAN-10        800          0         10                                                          
+         2 Dr. Red                                            Professor of Architecture                          Dr. Green                                          01-JAN-09        900          0         10                                                          
+         3 Dr. Green                                          Associate Dean                                     Dr. Orange                                         20-JUN-08       1000          0         11                                                          
+         4 Dr. Orange                                         Dean                                               Dr. Pink                                           01-MAY-07        700          0         11                                                          
+         5 Dr. Pink                                           Assist Vice-Chancellor                             Dr. Silver                                         04-AUG-09       3000          0         12                                                          
+         6 Dr. Silver                                         Associate Provost                                  Dr. Yellow                                         23-JAN-89       3000          0         12                                                          
+         7 Dr. Yellow                                         Provost                                            Dr. White                                          20-FEB-85       3000          0         12                                                          
+         8 Dr. White                                          Chancellor                                         Edward Ming                                        01-JAN-80       1000          0         13                                                          
+         9 Dr. Brown                                          Chancellor                                         Edward Ming                                        30-APR-79       1000          0         13                                                          
+        10 Dr. Entropy                                        Professor of Science                               Dr. Yellow                                         02-NOV-10        700          0         10                                                          
+
+10 rows selected.
+
+SQL> @\\Client\H$\Development\CIS442\CIS442-WK3-Lab\plscript.sql
+Employee: Dr. Black                                                                                                                                                                                                                                                     
+Salary: 800                                                                                                                                                                                                                                                             
+Commision: 80                                                                                                                                                                                                                                                           
+10% Commision                                                                                                                                                                                                                                                           
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM EMP;
+
+    EMP_ID NAME                                               JOB                                                MANAGER                                            HIRE_DT       SALARY COMMISSION    DEPT_ID                                                          
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --------- ---------- ---------- ----------                                                          
+         1 Dr. Black                                          Assistant Professor of Architecture                Dr. Red                                            01-JAN-10        800         80         10                                                          
+         2 Dr. Red                                            Professor of Architecture                          Dr. Green                                          01-JAN-09        900          0         10                                                          
+         3 Dr. Green                                          Associate Dean                                     Dr. Orange                                         20-JUN-08       1000          0         11                                                          
+         4 Dr. Orange                                         Dean                                               Dr. Pink                                           01-MAY-07        700          0         11                                                          
+         5 Dr. Pink                                           Assist Vice-Chancellor                             Dr. Silver                                         04-AUG-09       3000          0         12                                                          
+         6 Dr. Silver                                         Associate Provost                                  Dr. Yellow                                         23-JAN-89       3000          0         12                                                          
+         7 Dr. Yellow                                         Provost                                            Dr. White                                          20-FEB-85       3000          0         12                                                          
+         8 Dr. White                                          Chancellor                                         Edward Ming                                        01-JAN-80       1000          0         13                                                          
+         9 Dr. Brown                                          Chancellor                                         Edward Ming                                        30-APR-79       1000          0         13                                                          
+        10 Dr. Entropy                                        Professor of Science                               Dr. Yellow                                         02-NOV-10        700          0         10                                                          
+
+10 rows selected.
+
+SQL> @\\Client\H$\Development\CIS442\CIS442-WK3-Lab\plscript.sql
+Employee: Dr. Green                                                                                                                                                                                                                                                     
+Salary: 1000                                                                                                                                                                                                                                                            
+Commision: 150                                                                                                                                                                                                                                                          
+15% Commision                                                                                                                                                                                                                                                           
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM EMP;
+
+    EMP_ID NAME                                               JOB                                                MANAGER                                            HIRE_DT       SALARY COMMISSION    DEPT_ID                                                          
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --------- ---------- ---------- ----------                                                          
+         1 Dr. Black                                          Assistant Professor of Architecture                Dr. Red                                            01-JAN-10        800         80         10                                                          
+         2 Dr. Red                                            Professor of Architecture                          Dr. Green                                          01-JAN-09        900          0         10                                                          
+         3 Dr. Green                                          Associate Dean                                     Dr. Orange                                         20-JUN-08       1000        150         11                                                          
+         4 Dr. Orange                                         Dean                                               Dr. Pink                                           01-MAY-07        700          0         11                                                          
+         5 Dr. Pink                                           Assist Vice-Chancellor                             Dr. Silver                                         04-AUG-09       3000          0         12                                                          
+         6 Dr. Silver                                         Associate Provost                                  Dr. Yellow                                         23-JAN-89       3000          0         12                                                          
+         7 Dr. Yellow                                         Provost                                            Dr. White                                          20-FEB-85       3000          0         12                                                          
+         8 Dr. White                                          Chancellor                                         Edward Ming                                        01-JAN-80       1000          0         13                                                          
+         9 Dr. Brown                                          Chancellor                                         Edward Ming                                        30-APR-79       1000          0         13                                                          
+        10 Dr. Entropy                                        Professor of Science                               Dr. Yellow                                         02-NOV-10        700          0         10                                                          
+
+10 rows selected.
+
+SQL> @\\Client\H$\Development\CIS442\CIS442-WK3-Lab\plscript.sql
+Employee: Dr. Silver                                                                                                                                                                                                                                                    
+Salary: 3000                                                                                                                                                                                                                                                            
+Commision: 600                                                                                                                                                                                                                                                          
+20% Commision                                                                                                                                                                                                                                                           
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM EMP;
+
+    EMP_ID NAME                                               JOB                                                MANAGER                                            HIRE_DT       SALARY COMMISSION    DEPT_ID                                                          
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --------- ---------- ---------- ----------                                                          
+         1 Dr. Black                                          Assistant Professor of Architecture                Dr. Red                                            01-JAN-10        800         80         10                                                          
+         2 Dr. Red                                            Professor of Architecture                          Dr. Green                                          01-JAN-09        900          0         10                                                          
+         3 Dr. Green                                          Associate Dean                                     Dr. Orange                                         20-JUN-08       1000        150         11                                                          
+         4 Dr. Orange                                         Dean                                               Dr. Pink                                           01-MAY-07        700          0         11                                                          
+         5 Dr. Pink                                           Assist Vice-Chancellor                             Dr. Silver                                         04-AUG-09       3000          0         12                                                          
+         6 Dr. Silver                                         Associate Provost                                  Dr. Yellow                                         23-JAN-89       3000        600         12                                                          
+         7 Dr. Yellow                                         Provost                                            Dr. White                                          20-FEB-85       3000          0         12                                                          
+         8 Dr. White                                          Chancellor                                         Edward Ming                                        01-JAN-80       1000          0         13                                                          
+         9 Dr. Brown                                          Chancellor                                         Edward Ming                                        30-APR-79       1000          0         13                                                          
+        10 Dr. Entropy                                        Professor of Science                               Dr. Yellow                                         02-NOV-10        700          0         10                                                          
+
+10 rows selected.
+
+SQL> 
+@\\Client\H$\Development\CIS442\CIS442-WK3-Lab\plscript.sql
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM EMP;
+
+no rows selected
+
+SQL> 

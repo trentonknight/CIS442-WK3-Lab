@@ -4,7 +4,7 @@ DECLARE
   com EMP.Commission%Type;
   prompt INT;
   BEGIN
-  prompt := 5;
+  prompt := 0;
   com := 0.0;
   SELECT name
   INTO v_name
@@ -22,7 +22,7 @@ DECLARE
   DBMS_OUTPUT.PUT_LINE('Commision: ' || com);
   DBMS_OUTPUT.PUT_LINE('10% Commision');
 ELSIF
-  v_salary > 1000 AND v_salary < 1500 THEN
+  v_salary >= 1000 AND v_salary < 1500 THEN
   com := v_salary * 0.15;
   DBMS_OUTPUT.PUT_LINE('Commision: ' || com);
   DBMS_OUTPUT.PUT_LINE('15% Commision');
@@ -36,8 +36,9 @@ ELSIF
   DBMS_OUTPUT.PUT_LINE('0% Commision');
 END IF;
 /*End IF statements*/
-INSERT INTO EMP (Commission)VALUES(com);
-COMMIT;
+UPDATE EMP
+SET Commission=com
+WHERE EMP_ID = prompt;
   EXCEPTION
   WHEN NO_DATA_FOUND THEN
   DBMS_OUTPUT.PUT_LINE('Not a valid ID');
