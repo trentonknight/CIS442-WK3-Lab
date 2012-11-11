@@ -4,7 +4,7 @@ DECLARE
   com EMP.Commission%Type;
   prompt INT;
   BEGIN
-  prompt := 0;
+  prompt := 6;
   com := 0.0;
   SELECT name
   INTO v_name
@@ -39,6 +39,7 @@ END IF;
 UPDATE EMP
 SET Commission=com
 WHERE EMP_ID = prompt;
+/*exception if ID is not found*/
   EXCEPTION
   WHEN NO_DATA_FOUND THEN
   DBMS_OUTPUT.PUT_LINE('Not a valid ID');
