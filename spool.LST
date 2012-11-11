@@ -1,0 +1,16 @@
+DECLARE
+  v_name EMP.name%TYPE;
+  prompt INT;
+  BEGIN
+  prompt := 1;
+  SELECT name
+  INTO v_name
+  FROM EMP
+  WHERE EMP_ID = prompt;
+  DBMS_OUTPUT.PUT_LINE('Employee One: ' || v_name);
+  EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+  DBMS_OUTPUT.PUT_LINE('Not a valid ID');
+  END;
+/
+  
