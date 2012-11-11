@@ -1,0 +1,56 @@
+SPOOL \Client\H$\Downloads\fooMyFile.dat
+
+@\\Client\H$\Downloads\createtabs.sql
+
+@\\Client\H$\Downloads\loadtabs.sql
+
+@\\Client\H$\Downloads\testdata.sql
+
+###drop all tables###
+select 'drop table '||table_name||' cascade constraints;' from user_tables;
+#############################################
+
+drop table blah cascade constraints;
+
+###view all tables####
+select object_name from user_objects where object_type = 'TABLE';
+########################
+
+@\\Client\H$\Development\CIS442\CIS442-WK3-Lab\bsp_create.sql
+@\\Client\H$\Development\CIS442\CIS442-WK3-Lab\bsp_fill.sql
+@\\Client\H$\Development\CIS442\CIS442-WK3-Lab\plscript.sql
+set PAGESIZE 180;
+set LINESIZE 264;
+SELECT * FROM DEPT;
+SELECT * FROM EMP;
+
+SAVE\\Client\H$\Development\CIS442\CIS442-WK3-Lab\save.txt REPLACE;
+START\\Client\H$\Development\CIS442\CIS442-WK3-Lab\save.txt 
+
+
+
+SELECT * FROM user_tables
+
+DESCRIBE PERSONS;
+
+SPOOL OFFa;
+
+tee mariadb-spoolfile.txt;:wq!
+
+
+DROP TABLES EXAMPLE:
+
+drop table "CIS442FX70_08"."BOOK" cascade constraints;
+
+@\\Client\H$\Downloads\labBasicWK2.sql;
+@\\Client\H$\Downloads\fillBasicWK2.sql;
+@\\Client\H$\Downloads\listSearch.sql;
+@\\Client\H$\Downloads\betaPL.sql;
+
+###PL########
+add to the begining for verbous output:
+#####################
+set serveroutput on
+
+
+
