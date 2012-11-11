@@ -5,6 +5,7 @@ DECLARE
   prompt INT;
   BEGIN
   prompt := 5;
+  com := 0.0;
   SELECT name
   INTO v_name
   FROM EMP
@@ -35,6 +36,8 @@ ELSIF
   DBMS_OUTPUT.PUT_LINE('0% Commision');
 END IF;
 /*End IF statements*/
+INSERT INTO EMP (Commission)VALUES(com);
+COMMIT;
   EXCEPTION
   WHEN NO_DATA_FOUND THEN
   DBMS_OUTPUT.PUT_LINE('Not a valid ID');
